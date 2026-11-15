@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>农作物种子生产经营备案表</title>
+<style>
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Source Han Sans SC", sans-serif;
+    font-size: 14px;
+    color: #222;
+    padding: 0;
+  }
+
+  /* ---------- 版心 ---------- */
+  .detail {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 32px 24px 40px;
+    position: relative;
+  }
+
+  /* ---------- 标题 ---------- */
+  .detail-title {
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .typeText {
+    color: #329fe5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  /* ---------- 流水号 ---------- */
+  .detail-ls {
+    color: #329fe5;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    padding-right: 6px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .detail-ls span { display: inline-block; }
+
+  /* ---------- 备案人信息栅格 ---------- */
+  .detail-form {
+    border-top: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    margin-top: 10px;
+  }
+
+  .r1 { display: flex; flex-direction: row; }
+
+  .r1 > div {
+    line-height: 38px;
+    color: #222;
+    font-size: 14px;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    min-height: 38px;
+  }
+
+  .r1 > div span {
+    display: inline-block;
+    padding: 0 16px;
+  }
+
+  .d1 { flex: 276; text-align: right; }
+  .d2 { flex: 410; text-align: left; }
+  .d3 { flex: 228; text-align: right; }
+  .d4 { flex: 376; text-align: left; }
+  .d5 { flex: 1014; text-align: left; }
+
+  .backcss { background-color: #eff7ff; text-align: left; }
+
+  /* ---------- 种子信息表 ---------- */
+  .detail-table {
+    border: 1px solid #eeeeee;
+    margin-top: 25px;
+    border-bottom: 0;
+  }
+
+  .detail-table .r1 > div { border-bottom: 1px solid #eeeeee; }
+
+  table.grid {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 14px;
+  }
+
+  table.grid th,
+  table.grid td {
+    padding: 8px 3px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  table.grid th:last-child,
+  table.grid td:last-child { border-right: 0; }
+
+  table.grid th {
+    background: #fafbfd;
+    color: #555;
+    font-weight: 600;
+    height: 48px;
+  }
+
+  table.grid td {
+    color: #222;
+    font-weight: 400;
+    height: 62px;
+  }
+
+  /* 备注列：内容左对齐，仅在语义换行处断行 */
+  table.grid td.remark {
+    text-align: left;
+    padding-left: 10px;
+    line-height: 22px;
+  }
+
+  /* ---------- 落款 ---------- */
+  .detail-bottom {
+    margin-top: 40px;
+    display: flex;
+    position: relative;
+  }
+
+  .detail-bottom-1 { flex: 1 1 0%; }
+
+  .detail-bottom-2 { flex: 0 0 auto; width: 276px; }
+
+  .bottomText { width: 100%; display: flex; }
+
+  .bottomText > div {
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  .bottomText-title { text-align: right; width: 150px; }
+
+  .bottomText-value { flex: 1; text-align: left; }
+
+  /* ---------- 打印 ---------- */
+  @page { size: A4 landscape; margin: 10mm; }
+
+  @media print {
+    html, body { background: #fff; padding: 0; }
+    .detail {
+      max-width: none;
+      width: 100%;
+      border-radius: 0;
+      padding: 0;
+    }
+    .detail-bottom { margin-top: 28px; }
+  }
+</style>
+</head>
+<body>
+  <div class="detail">
+
+    <div class="detail-title">
+      农作物种子生产经营备案表
+      <div class="typeText">（类型：经营不分装种子）</div>
+    </div>
+
+    <div class="detail-ls">
+      <span>流水号：5303022026001429058</span>
+    </div>
+
+    <!-- 备案人信息 -->
+    <div class="detail-form">
+      <div class="r1">
+        <div class="d1 backcss"><span>备案人信息</span></div>
+      </div>
+
+      <div class="r1">
+        <div class="d1"><span>零售商名称</span></div>
+        <div class="d2"><span>麒麟区一禾丰收金种零售农场(个体工商户)</span></div>
+        <div class="d3"><span>统一社会信用代码</span></div>
+        <div class="d4"><span>92530302MAEPDD2M40</span></div>
+      </div>
+
+      <div class="r1">
+        <div class="d1"><span>住所</span></div>
+        <div class="d2"><span>云南省曲靖市麒麟区文华街道办事处凤来社区凤来二组318号</span></div>
+        <div class="d3"><span>种子生产经营区域</span></div>
+        <div class="d4"><span>云南省曲靖市麒麟区</span></div>
+      </div>
+
+      <div class="r1">
+        <div class="d1"><span>负责人</span></div>
+        <div class="d2"><span>李志雄</span></div>
+        <div class="d3"><span>联系电话</span></div>
+        <div class="d4"><span>15908803271</span></div>
+      </div>
+    </div>
+
+    <!-- 经营不分装种子信息 -->
+    <div class="detail-table">
+      <div class="r1">
+        <div class="d1 backcss"><span>经营不分装种子信息</span></div>
+      </div>
+
+      <table class="grid">
+        <colgroup>
+          <col style="width:4.00%">
+          <col style="width:7.50%">
+          <col style="width:5.00%">
+          <col style="width:9.50%">
+          <col style="width:9.00%">
+          <col style="width:8.50%">
+          <col style="width:9.00%">
+          <col style="width:13.00%">
+          <col style="width:14.00%">
+          <col style="width:20.50%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>作物种类</th>
+            <th>种子类别</th>
+            <th>品种名称</th>
+            <th>种子重量(公斤)</th>
+            <th>种子数量(袋)</th>
+            <th>数量单位</th>
+            <th>种子生产经营许可证编号</th>
+            <th>企业名称</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>南瓜</td>
+            <td>杂交</td>
+            <td>锦优6号</td>
+            <td>0.5</td>
+            <td>50</td>
+            <td>5.0粒/袋</td>
+            <td>D（鲁潍安丘）农种许字（2025）第0001号</td>
+            <td>潍坊锦润种园种业有限公司</td>
+            <td class="remark">开始年月：2026-11<br>结束年月：2027-10<br>仅限于非主要农作物</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>南瓜</td>
+            <td>杂交</td>
+            <td>锦优9号</td>
+            <td>0.5</td>
+            <td>50</td>
+            <td>5.0粒/袋</td>
+            <td>D（鲁潍安丘）农种许字（2025）第0001号</td>
+            <td>潍坊锦润种园种业有限公司</td>
+            <td class="remark">开始年月：2026-11<br>结束年月：2027-10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 落款 -->
+    <div class="detail-bottom">
+      <div class="detail-bottom-1"></div>
+      <div class="detail-bottom-2">
+        <div class="bottomText">
+          <div class="bottomText-title">备案机关(盖章)：</div>
+          <div class="bottomText-value">麒麟区种子管理站</div>
+        </div>
+        <div class="bottomText">
+          <div class="bottomText-title">备案日期：</div>
+          <div class="bottomText-value">2026-11-09</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
